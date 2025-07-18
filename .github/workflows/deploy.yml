@@ -88,7 +88,7 @@ jobs:
           <head>
               <meta charset="UTF-8">
               <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>Tổng hợp kinh tế Việt Nam</title>
+              <title>Ghi Chú Nhanh</title>
               <style>
                   body { 
                       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
@@ -172,7 +172,7 @@ jobs:
           </head>
           <body>
               <div class="container">
-                  <h1>📰 Ghi Chú Mỗi Ngày</h1>
+                  <h1>📰 Ghi Chú Nhanh</h1>
                   <div class="page-grid">
           EOF
           
