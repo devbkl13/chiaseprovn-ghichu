@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tốc Độ Tối Đa Năm 2025</title>
+    <style>
+        @page {
+            size: A5;
+            margin: 2mm;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            font-size: 11px;
+            line-height: 1.4;
+            margin: 0;
+            padding: 12px;
+            background: #6eb7e7;
+            color: #1a1a1a;
+            min-height: 100vh;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+            background: #6eb7e7;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        h2 {
+            font-size: 14px;
+            font-weight: 600;
+            margin: 20px 0 12px 0;
+            color: #2d3748;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        h2::before {
+            content: "";
+            width: 4px;
+            height: 20px;
+            background: #6eb7e7;
+            border-radius: 2px;
+        }
+        
+        .table-container {
+            margin-bottom: 24px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+            margin-bottom: 12px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            background: white;
+        }
+        
+        th, td {
+            padding: 4px;
+            text-align: center;
+            vertical-align: middle;
+            border: none;
+            position: relative;
+        }
+        
+        th {
+            background: #6eb7e7;
+            /* border: 2px solid rgba(102, 126, 234, 0.2); */
+            color: white;
+            font-weight: 600;
+            font-size: 12px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        
+        tbody tr {
+            transition: all 0.3s ease;
+        }
+        
+        tbody tr:nth-child(even) {
+            background: rgba(102, 126, 234, 0.03);
+        }
+
+        .table-2 tbody tr:nth-child(odd) {
+            background: rgba(102, 126, 234, 0.03);
+        }
+
+        .table-2 tbody tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.03);
+        }
+        
+        tbody tr:hover {
+            background: rgba(102, 126, 234, 0.08);
+            transform: translateY(-1px);
+        }
+        
+        .vehicle-type {
+            text-align: left;
+            padding-left: 12px;
+            color: #2d3748;
+        }
+        
+        .speed-value {
+            font-weight: 700;
+            font-size: 12px;
+            color: #e53e3e;
+            background: rgba(229, 62, 62, 0.1);
+            padding: 4px 6px;
+            border-radius: 8px;
+            display: inline-block;
+            min-width: 20px;
+        }
+        
+        .section-header {
+            background: #6eb7e7 !important;
+            color: white !important;
+            font-weight: 600;
+            text-align: center;
+            font-size: 12px;
+        }
+        
+        .info-card {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            border-radius: 12px;
+            padding: 16px;
+            margin: 16px 0;
+            backdrop-filter: blur(10px);
+        }
+        
+        .info-card h3 {
+            margin: 0 0 8px 0;
+            font-size: 12px;
+            font-weight: 600;
+            color: #2d3748;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .info-card h3::before {
+            content: "⚠️";
+            font-size: 14px;
+        }
+        
+        .info-list {
+            display: grid;
+            gap: 8px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .info-list li {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            border-left: 3px solid #6eb7e7;
+        }
+        
+        .info-list .speed {
+            font-weight: 700;
+            color: #e53e3e;
+        }
+        
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #4a5568;
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 2px solid rgba(102, 126, 234, 0.1);
+            font-weight: 500;
+            background: #6eb7e7;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            font-size: 10px;
+            color: #718096;
+            margin: 8px 0;
+            font-style: italic;
+            text-align: center;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+
+            * {
+                box-shadow: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tốc Độ Tối Đa Các Loại Xe Từ Năm 2025</h1>
+        
+        <div class="table-container">
+            <h2>1. Xe Máy</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th rowspan="2" style="width: 260px;">Khu vực</th>
+                        <th colspan="2">Tốc độ khai thác tối đa (km/h)</th>
+                    </tr>
+                    <tr>
+                        <th>Đường đôi; đường một chiều ≥2 làn</th>
+                        <th>Đường hai chiều; đường một chiều 1 làn</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="vehicle-type">Trong khu vực đông dân cư</td>
+                        <td><span class="speed-value">60</span></td>
+                        <td><span class="speed-value">50</span></td>
+                    </tr>
+                    <tr>
+                        <td class="vehicle-type">Ngoài khu vực đông dân cư</td>
+                        <td><span class="speed-value">70</span></td>
+                        <td><span class="speed-value">60</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="table-container table-2">
+            <h2>2. Xe Ô Tô</h2>
+            <div class="subtitle">Tốc độ tối đa của xe ô tô (trừ đường cao tốc)</div>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th rowspan="2">Loại xe</th>
+                        <th colspan="2">Tốc độ khai thác tối đa (km/h)</th>
+                    </tr>
+                    <tr>
+                        <th>Đường đôi; đường một chiều ≥2 làn</th>
+                        <th>Đường hai chiều; đường một chiều 1 làn</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="section-header" colspan="3">TRONG KHU VỰC ĐÔNG DÂN CƯ</td>
+                    </tr>
+                    <tr>
+                        <td class="vehicle-type">Tất cả</td>
+                        <td><span class="speed-value">60</span></td>
+                        <td><span class="speed-value">50</span></td>
+                    </tr>
+                    <tr>
+                        <td class="section-header" colspan="3">NGOÀI KHU VỰC ĐÔNG DÂN CƯ</td>
+                    </tr>
+                    <tr>
+                        <td class="vehicle-type">Xe ô tô chở người ≤28 chỗ (trừ xe buýt, trừ người lái); ô tô tải ≤3,5 tấn</td>
+                        <td><span class="speed-value">90</span></td>
+                        <td><span class="speed-value">80</span></td>
+                    </tr>
+                    <tr>
+                        <td class="vehicle-type">Xe ô tô chở người >28 chỗ (trừ xe buýt, trừ người lái); ô tô tải >3,5 tấn</td>
+                        <td><span class="speed-value">80</span></td>
+                        <td><span class="speed-value">70</span></td>
+                    </tr>
+                    <tr>
+                        <td class="vehicle-type">Xe buýt; ô tô đầu kéo kéo sơ mi rơ moóc; ô tô chuyên dùng</td>
+                        <td><span class="speed-value">70</span></td>
+                        <td><span class="speed-value">60</span></td>
+                    </tr>
+                    <tr>
+                        <td class="vehicle-type">Ô tô kéo rơ moóc; ô tô trộn bê tông; ô tô xi téc</td>
+                        <td><span class="speed-value">60</span></td>
+                        <td><span class="speed-value">50</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="info-card">
+            <h3>Thuật ngữ</h3>
+            <ul class="info-list">
+                <li><strong>Đường đôi&nbsp;</strong> có dải phân cách ở giữa 2 chiều xe chạy.</li>
+                <li><strong>Đường hai chiều&nbsp;</strong> có vạch sơn giữa 2 chiều xe chạy.</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <strong>Thông tư 38/2024/TT-BGTVT áp dụng từ năm 2025 • Nghiêm chỉnh chấp hành luật giao thông</strong>
+        </div>
+    </div>
+</body>
+</html>
