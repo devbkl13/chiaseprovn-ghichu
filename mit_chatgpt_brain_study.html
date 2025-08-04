@@ -344,7 +344,19 @@
 
                 <section class="section">
                     <h2><span class="section-number">2</span>Phương pháp và kết quả nghiên cứu chi tiết</h2>
-                    
+
+                    <h3>Thông tin về người tham gia:</h3>
+                    <div class="research-highlight">
+                        <ul>
+                            <li><strong>Tổng số người tham gia:</strong> 54 người hoàn thành 3 buổi đầu, 18 người hoàn thành buổi thứ 4</li>
+                            <li><strong>Phân bố nhóm:</strong> Mỗi nhóm có 18 người trong các buổi 1, 2, 3</li>
+                            <li><strong>Độ tuổi trung bình:</strong> 22.9 tuổi (độ lệch chuẩn 1.69)</li>
+                            <li><strong>Phân bố giới tính:</strong> 32 nữ, 19 nam, 2 không nhị nguyên giới, 1 không cung cấp thông tin</li>
+                            <li><strong>Thời gian nghiên cứu:</strong> 4 tháng</li>
+                            <li><strong>Thù lao:</strong> 100 USD cho 3 buổi đầu + 50 USD nếu tham gia buổi 4</li>
+                        </ul>
+                    </div>
+
                     <h3>Cách tiến hành:</h3>
                     <div class="methodology">
                         <div class="method-item">
@@ -355,10 +367,28 @@
                                 <li><strong>Search Group</strong>: Dùng Google.</li>
                                 <li><strong>Brain Group</strong>: Không dùng công cụ.</li>
                             </ul>
-                            <p>Sử dụng EEG để đo hoạt động não trong suốt quá trình viết.<br>
-                            Thu thập bài viết và phản hồi về cảm giác "làm chủ nội dung".</p>
+                            <p><strong>Thời gian thực hiện mỗi buổi:</strong> Khoảng 60 phút, bao gồm:</p>
+                            <ul>
+                                <li>Chào mừng, giới thiệu: 15 phút</li>
+                                <li>Thiết lập tai nghe EEG: 25 phút</li>
+                                <li>Bài kiểm tra hiệu chuẩn: 6 phút</li>
+                                <li>Viết luận: 20 phút</li>
+                                <li>Phỏng vấn sau đánh giá: 5 phút</li>
+                            </ul>
                         </div>
-                        
+
+                        <div class="method-item">
+                            <h4>Thiết bị EEG:</h4>
+                            <ul>
+                                <li><strong>Loại tai nghe:</strong> Neuroelectrics Enobio 32 điện cực</li>
+                                <li><strong>Tốc độ lấy mẫu:</strong> 500 Hz</li>
+                                <li><strong>Độ phân giải:</strong> 24 bit</li>
+                                <li><strong>Độ ồn đo lường:</strong> dưới 1 µV RMS</li>
+                                <li><strong>Số cặp điện cực phân tích:</strong> 32 x 32 = 1024</li>
+                                <li><strong>Ngưỡng ý nghĩa thống kê:</strong> p < 0.05 (*), p < 0.01 (**), p < 0.001 (***)</li>
+                            </ul>
+                        </div>
+
                         <div class="method-item">
                             <h4>Giai đoạn 4 (tháng cuối):</h4>
                             <p>Các nhóm hoán đổi vai trò:</p>
@@ -370,27 +400,91 @@
                         </div>
                     </div>
 
-                    <h3>Kết quả chính:</h3>
-                    <ul>
-                        <li><strong>LLM Group</strong>:
+                    <h3>Kết quả về khả năng trích dẫn và quyền sở hữu bài luận:</h3>
+
+                    <div class="research-highlight">
+                        <h4>📊 Buổi 1 - Khả năng trích dẫn:</h4>
+                        <ul>
+                            <li><strong>Nhóm LLM:</strong> 83.3% (15/18) không thể trích dẫn chính xác, 0/18 trích dẫn đúng</li>
+                            <li><strong>Nhóm Công cụ Tìm kiếm:</strong> 11.1% (2/18) gặp khó khăn, 3/18 không trích dẫn đúng</li>
+                            <li><strong>Nhóm Chỉ não bộ:</strong> 11.1% (2/18) gặp khó khăn, 2/18 không trích dẫn đúng</li>
+                            <li><strong>Ý nghĩa thống kê:</strong> F(2, 51) = 79.98, p < 0.001 cho khả năng trích dẫn</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-highlight">
+                        <h4>📊 Buổi 2-3 - Xu hướng cải thiện:</h4>
+                        <ul>
+                            <li><strong>Buổi 2:</strong> Nhóm Chỉ não bộ đạt 18/18 khả năng trích dẫn hoàn hảo</li>
+                            <li><strong>Buổi 3:</strong> Nhóm Công cụ Tìm kiếm và Chỉ não bộ đều đạt 18/18 hoàn hảo</li>
+                            <li><strong>Nhóm LLM:</strong> Vẫn gặp khó khăn với 6/18 không thể trích dẫn đúng ở buổi 3</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-highlight">
+                        <h4>📊 Buổi 4 - Chuyển đổi nhóm:</h4>
+                        <ul>
+                            <li><strong>LLM-sang-Não-bộ:</strong> 7/9 thất bại trong việc trích dẫn, chỉ 1/9 trích dẫn chính xác</li>
+                            <li><strong>Não-bộ-sang-LLM:</strong> Chỉ 1/9 gặp khó khăn, 7/9 trích dẫn chính xác</li>
+                            <li><strong>Khác biệt có ý nghĩa:</strong> p < 0.01, |t| = 3.62</li>
+                        </ul>
+                    </div>
+
+                    <h3>Kết quả phân tích EEG - Hoạt động não bộ:</h3>
+
+                    <div class="research-highlight">
+                        <h4>🧠 Tổng quan kết nối thần kinh:</h4>
+                        <ul>
+                            <li><strong>Nhóm Chỉ não bộ:</strong> Mạng lưới mạnh nhất, rộng nhất</li>
+                            <li><strong>Nhóm Công cụ Tìm kiếm:</strong> Giảm 34-48% so với nhóm Chỉ não bộ</li>
+                            <li><strong>Nhóm LLM:</strong> Yếu nhất, giảm tới 55% so với nhóm Chỉ não bộ</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-highlight">
+                        <h4>🧠 So sánh LLM vs Chỉ não bộ (Buổi 1-3):</h4>
+                        <ul>
+                            <li><strong>Băng tần Alpha:</strong> Chỉ não bộ có 79 kết nối, LLM có 42 kết nối</li>
+                            <li><strong>Băng tần Beta:</strong> Chỉ não bộ = 2.854, LLM = 2.653 (tổng kết nối)</li>
+                            <li><strong>Băng tần Delta:</strong> Chỉ não bộ có 78 kết nối, LLM có 31 kết nối</li>
+                            <li><strong>Băng tần Theta:</strong> Chỉ não bộ có 65 kết nối, LLM có 29 kết nối</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-highlight">
+                        <h4>🧠 Kết quả đặc biệt ở Buổi 4:</h4>
+                        <ul>
+                            <li><strong>Não-bộ-sang-LLM:</strong> Tăng đáng kể trên tất cả băng tần khi được dùng LLM</li>
+                            <li><strong>Alpha:</strong> Tăng lên 0.823 (so với 0.107 của nhóm LLM gốc buổi 3)</li>
+                            <li><strong>Beta:</strong> Đạt 1.924 (cao nhất, so với 0.275 của nhóm LLM gốc)</li>
+                            <li><strong>Delta:</strong> Đạt 1.948 (so với 0.188 của nhóm LLM gốc)</li>
+                        </ul>
+                    </div>
+
+                    <h3>Kết quả phân tích ngôn ngữ (NLP):</h3>
+
+                    <div class="research-highlight">
+                        <h4>📝 Sử dụng thực thể có tên (NERs):</h4>
+                        <ul>
+                            <li><strong>Nhóm LLM:</strong> Sử dụng nhiều nhất, tương quan mạnh nhất</li>
+                            <li><strong>Nhóm Công cụ Tìm kiếm:</strong> Ít hơn ít nhất 2 lần so với LLM</li>
+                            <li><strong>Nhóm Chỉ não bộ:</strong> Ít hơn 60% so với nhóm LLM</li>
+                            <li><strong>NERs phổ biến của LLM:</strong> Người, Tác phẩm nghệ thuật, Tổ chức, Sự kiện</li>
+                        </ul>
+                    </div>
+
+                    <h3>Chi phí năng lượng:</h3>
+                    <div class="research-highlight">
+                        <ul>
+                            <li><strong>Mỗi truy vấn LLM:</strong> 0.3 Wh năng lượng</li>
+                            <li><strong>Mỗi truy vấn tìm kiếm:</strong> 0.03 Wh năng lượng</li>
+                            <li><strong>Tổng năng lượng ước tính (20 giờ):</strong></li>
                             <ul>
-                                <li>Có hoạt động não bộ thấp nhất trong 3 nhóm.</li>
-                                <li>Điểm số ghi nhớ thấp và cảm giác "sở hữu bài viết" cũng thấp.</li>
-                                <li>Khi chuyển sang viết không dùng AI (LLM → Brain), vẫn thể hiện hiệu suất kém.</li>
+                                <li>Nhóm LLM: 180 Wh (600 truy vấn)</li>
+                                <li>Nhóm Công cụ Tìm kiếm: 18 Wh (600 truy vấn)</li>
                             </ul>
-                        </li>
-                        <li><strong>Brain Group</strong>:
-                            <ul>
-                                <li>Ghi nhớ nội dung tốt nhất.</li>
-                                <li>Khi chuyển sang dùng AI (Brain → LLM), kết quả được cải thiện và có hoạt động não cao hơn.</li>
-                            </ul>
-                        </li>
-                        <li><strong>Đặc biệt</strong>:
-                            <ul>
-                                <li>EEG cho thấy sự <em>"tách rời nhận thức"</em> (cognitive disconnection) ở nhóm dùng AI lâu dài.</li>
-                            </ul>
-                        </li>
-                    </ul>
+                        </ul>
+                    </div>
                 </section>
 
                 <section class="section">
