@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tổng hợp loại hình kinh doanh tại Việt Nam — Bản trích luật</title>
+<style>
+  :root{
+    --bg:#0f172a;           /* slate-900 */
+    --panel:#111827;        /* gray-900 */
+    --muted:#94a3b8;        /* slate-400 */
+    --text:#e5e7eb;         /* gray-200 */
+    --accent:#22d3ee;       /* cyan-400 */
+    --accent-2:#a78bfa;     /* violet-400 */
+    --ok:#22c55e;           /* green-500 */
+    --warn:#f59e0b;         /* amber-500 */
+    --danger:#ef4444;       /* red-500 */
+    --card:#0b1220;
+    --ring: 0 0 0 3px rgba(34,211,238,.25);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji";}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .container{max-width:1200px;margin:0 auto;padding:24px}
+  header{
+    position:sticky; top:0; z-index:50;
+    backdrop-filter:saturate(180%) blur(8px);
+    background:linear-gradient(180deg, rgba(2,6,23,.9), rgba(2,6,23,.6));
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .nav{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:10px 24px}
+  .brand{display:flex;gap:10px;align-items:center}
+  .brand .logo{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent-2));box-shadow:0 8px 24px rgba(167,139,250,.35)}
+  .brand h1{font-size:17px;margin:0;color:#fff;font-weight:700;letter-spacing:.2px}
+  .nav a{color:var(--text);opacity:.85}
+  .nav a:hover{opacity:1}
+  .hero{padding:18px 24px 6px;border-bottom:1px solid rgba(255,255,255,.06)}
+  .hero h2{margin:8px 0 0;font-size:24px}
+  .hero p{margin:8px 0;color:var(--muted)}
+  .section{padding:28px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+  .card{background:linear-gradient(180deg,rgba(17,24,39,.9),rgba(2,6,23,.9));border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+  .grid{display:grid;gap:18px}
+  @media (min-width: 900px){ .grid-2{grid-template-columns:1.2fr .8fr} }
+  .pill{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border-radius:999px;background:rgba(34,211,238,.1);color:var(--accent);font-size:12px;font-weight:600;letter-spacing:.3px}
+  .kbd{padding:.2em .5em;border-radius:6px;background:#0b1220;border:1px solid rgba(255,255,255,.07);font-size:.85em}
+  .table-wrap{overflow:auto;border-radius:12px}
+  table{width:100%;border-collapse:separate;border-spacing:0;min-width:900px}
+  thead th{position:sticky;top:0;background:#0b1220;color:#cbd5e1;font-size:12px;letter-spacing:.3px;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.12);padding:10px 12px;text-align:left}
+  tbody td{padding:12px;border-bottom:1px solid rgba(255,255,255,.06);vertical-align:top}
+  tbody tr:hover{background:rgba(148,163,184,.06)}
+  .tag{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;border:1px solid rgba(255,255,255,.12);color:#d1d5db;margin-right:6px;margin-top:4px}
+  .yes{color:var(--ok)}
+  .no{color:var(--danger)}
+  .maybe{color:var(--warn)}
+  .footnotes{font-size:14px;color:var(--muted)}
+  .footnotes li{margin:6px 0}
+  .tree{--line:rgba(148,163,184,.3);padding-left:12px}
+  .tree ul{list-style:none;margin:0;padding-left:20px;border-left:1px dashed var(--line)}
+  .tree li{position:relative;margin:.2em 0;padding-left:14px}
+  .tree li::before{content:"";position:absolute;left:-1px;top:1.1em;width:16px;height:0;border-top:1px dashed var(--line)}
+  .tree .node{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border:1px solid rgba(255,255,255,.12);border-radius:12px;background:rgba(2,6,23,.6)}
+  .tree .node .m{font-size:12px;color:var(--muted)}
+  .legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  .legend .item{display:flex;gap:8px;align-items:center}
+  .dot{width:10px;height:10px;border-radius:999px}
+  .dot.a{background:var(--accent)}
+  .dot.b{background:var(--accent-2)}
+  .dot.c{background:var(--ok)}
+  .dot.d{background:var(--warn)}
+  .muted{color:var(--muted)}
+  .notice{border-left:3px solid var(--accent);padding:10px 12px;background:rgba(34,211,238,.08);border-radius:8px;margin:10px 0;color:#cffafe}
+  .sr-only{position:absolute;left:-10000px}
+</style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <h1>Tổng hợp loại hình kinh doanh — Việt Nam</h1>
+      </div>
+      <nav>
+        <a href="#bang-so-sanh">Bảng so sánh</a> ·
+        <a href="#so-do-cay">Sơ đồ cây</a> ·
+        <a href="#can-cu-phap-ly">Căn cứ pháp lý</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section" id="pham-vi">
+      <div class="card">
+        <p class="notice"><strong>Lưu ý nhanh:</strong> “Doanh nghiệp” theo <a href="#ref-ldn2020">Luật Doanh nghiệp 2020</a> gồm: Công ty TNHH (1TV, 2+TV), Công ty cổ phần, Công ty hợp danh, Doanh nghiệp tư nhân. Ngoài ra pháp luật công nhận <em>nhóm hợp tác</em> theo <a href="#ref-lhtx2023">Luật Hợp tác xã 2023</a> (Tổ hợp tác, Hợp tác xã, Liên hiệp hợp tác xã) và <em>Hộ kinh doanh</em> theo <a href="#ref-nd01">Nghị định 01/2021/NĐ-CP</a>. Các đơn vị phụ thuộc của doanh nghiệp gồm <em>chi nhánh</em>, <em>văn phòng đại diện</em>, <em>địa điểm kinh doanh</em> (Điều 44 LDN 2020).</p>
+      </div>
+    </section>
+
+    <section class="section" id="bang-so-sanh">
+      <h3 style="margin:0 0 10px">1) Bảng so sánh ngắn gọn — quyền hạn, trách nhiệm & đặc điểm pháp lý</h3>
+      <div class="table-wrap card">
+        <table aria-describedby="tbl-note">
+          <thead>
+            <tr>
+              <th>Loại hình</th>
+              <th>Căn cứ pháp lý (điều)</th>
+              <th>Tư cách pháp nhân</th>
+              <th>Thành viên/tối thiểu</th>
+              <th>Trách nhiệm về nợ & nghĩa vụ</th>
+              <th>Huy động vốn</th>
+              <th>Chuyển nhượng vốn</th>
+              <th>Quản trị (tóm tắt)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>CTTNHH 2+TV</strong></td>
+              <td>LDN 2020 <a href="#ref-ldn2020">Điều 46</a>, 51–53</td>
+              <td class="yes">Có (kể từ ngày cấp GCN ĐKDN — Điều 46.2)</td>
+              <td>02–50 thành viên</td>
+              <td>Giới hạn trong phần vốn góp (46.1)</td>
+              <td>Không phát hành cổ phần (46.3); <strong>được</strong> phát hành trái phiếu (46.4)</td>
+              <td>Hạn chế theo Điều 51, 52, 53</td>
+              <td>Hội đồng thành viên, Chủ tịch HĐTV, Giám đốc/TGĐ; (quy định chi tiết tại Chương III Mục 1)</td>
+              
+            </tr>
+            <tr>
+              <td><strong>CTTNHH 1TV</strong></td>
+              <td>LDN 2020 <a href="#ref-ldn2020">Điều 74</a></td>
+              <td class="yes">Có (kể từ ngày cấp GCN ĐKDN)</td>
+              <td>01 chủ sở hữu (tổ chức/cá nhân)</td>
+              <td>Giới hạn trong vốn điều lệ</td>
+              <td>Không phát hành cổ phần; có thể phát hành trái phiếu theo luật liên quan</td>
+              <td>Khi huy động thêm thành viên phải chuyển sang TNHH 2+TV hoặc CTCP (74.2)</td>
+              <td>Một trong các mô hình theo Mục 2 Chương III</td>
+              
+            </tr>
+            <tr>
+              <td><strong>Công ty cổ phần (CTCP)</strong></td>
+              <td>LDN 2020 <a href="#ref-ldn2020">Điều 111–116</a></td>
+              <td class="yes">Có (Điều 111.2)</td>
+              <td>≥ 03 cổ đông; không giới hạn tối đa (111.1b)</td>
+              <td>Giới hạn trong số vốn đã góp (111.1c)</td>
+              <td><strong>Được</strong> phát hành cổ phần, trái phiếu, chứng khoán khác (111.3)</td>
+              <td>Tự do chuyển nhượng, trừ một số trường hợp luật định (111.1d)</td>
+              <td>Đại hội đồng cổ đông, HĐQT, Ban kiểm soát/KSNB… (Chương V)</td>
+              
+            </tr>
+            <tr>
+              <td><strong>Công ty hợp danh (CTHD)</strong></td>
+              <td>LDN 2020 <a href="#ref-ldn2020">Điều 177+</a></td>
+              <td class="yes">Có</td>
+              <td>≥ 02 thành viên hợp danh (có thể có thành viên góp vốn)</td>
+              <td>Thành viên hợp danh <em>chịu trách nhiệm vô hạn</em>; thành viên góp vốn chịu trách nhiệm hữu hạn trong phần góp (Ch. VI)</td>
+              <td>Không phát hành bất kỳ loại chứng khoán nào (đặc trưng của CTHD)</td>
+              <td>Phụ thuộc Điều lệ và quy định về chuyển nhượng phần vốn góp</td>
+              <td>Hội đồng thành viên (tất cả thành viên hợp danh); chế độ nhân danh công ty bởi thành viên hợp danh</td>
+              
+            </tr>
+            <tr>
+              <td><strong>Doanh nghiệp tư nhân (DNTN)</strong></td>
+              <td>LDN 2020 <a href="#ref-ldn2020">Điều 188+</a></td>
+              <td class="no">Không (chủ DNTN và DN là một)</td>
+              <td>01 chủ (cá nhân)</td>
+              <td><em>Chịu trách nhiệm vô hạn</em> bằng toàn bộ tài sản của chủ DN</td>
+              <td>Không được phát hành chứng khoán; không có phần vốn góp/cổ phần</td>
+              <td>Không áp dụng (không có “vốn góp” để chuyển nhượng)</td>
+              <td>Chủ DN quyết định mọi vấn đề; một cá nhân chỉ được sở hữu 01 DNTN</td>
+              
+            </tr>
+            <tr>
+              <td><strong>Hộ kinh doanh</strong></td>
+              <td>NĐ 01/2021/NĐ‑CP <a href="#ref-nd01">Điều 79–88</a></td>
+              <td class="no">Không</td>
+              <td>01 cá nhân hoặc các thành viên hộ gia đình (ủy quyền 1 người đại diện)</td>
+              <td><em>Chịu trách nhiệm vô hạn</em> bằng toàn bộ tài sản của cá nhân/thành viên hộ (79.1)</td>
+              <td>Không phát hành chứng khoán; phạm vi huy động vốn theo quy định dân sự/thuế</td>
+              <td>Không có “phần vốn” để chuyển nhượng; có thể chấm dứt/đăng ký lại</td>
+              <td>Đăng ký tại cấp huyện; đặt tên phải có cụm “Hộ kinh doanh” (86–88)</td>
+              
+            </tr>
+            <tr>
+              <td><strong>Tổ hợp tác (THT)</strong></td>
+              <td>Luật HTX 2023 <a href="#ref-lhtx2023">Điều 1, 4</a></td>
+              <td class="maybe">Theo Luật HTX 2023 (chủ thể riêng, không phải “doanh nghiệp” theo LDN 2020)</td>
+              <td>Thành viên tự nguyện liên kết</td>
+              <td>Theo thỏa thuận và luật liên quan</td>
+              <td>Không phát hành chứng khoán</td>
+              <td>Theo thỏa thuận</td>
+              <td>Tổ chức, quản lý theo nguyên tắc tự nguyện, dân chủ (Điều 8)</td>
+              
+            </tr>
+            <tr>
+              <td><strong>Hợp tác xã (HTX)</strong></td>
+              <td>Luật HTX 2023 <a href="#ref-lhtx2023">Điều 1, 4, 41–48</a></td>
+              <td class="yes">Có tư cách pháp lý của tổ chức HTX theo Luật HTX</td>
+              <td>Thành viên là cá nhân/tổ chức; nguyên tắc tự nguyện</td>
+              <td>Trách nhiệm theo phần vốn góp và Điều lệ; có quỹ chung không chia</td>
+              <td>Có thể góp vốn, mua cổ phần tại DN khác theo điều kiện (Điều 82); không phải CTCP</td>
+              <td>Theo Điều lệ; không phải “cổ phần” như CTCP</td>
+              <td>Đại hội thành viên là cơ quan cao nhất; có Hội đồng quản trị, Ban kiểm soát/kiểm soát viên (theo Luật)</td>
+              
+            </tr>
+            <tr>
+              <td><strong>Liên hiệp HTX</strong></td>
+              <td>Luật HTX 2023 <a href="#ref-lhtx2023">Điều 1, 4</a></td>
+              <td class="yes">Có (tổ chức cấp trên của HTX theo Luật)</td>
+              <td>Thành viên là các HTX</td>
+              <td>Như HTX và theo Điều lệ</td>
+              <td>Tương tự khuôn khổ HTX</td>
+              <td>Theo Điều lệ</td>
+              <td>Tổ chức liên kết các HTX cùng ngành/lĩnh vực</td>
+              
+            </tr>
+            <tr>
+              <td><strong>Đơn vị phụ thuộc của DN</strong><br/><span class="muted">Chi nhánh / Văn phòng đại diện / Địa điểm kinh doanh</span></td>
+              <td>LDN 2020 <a href="#ref-ldn2020">Điều 44</a></td>
+              <td class="no">Không (đơn vị phụ thuộc)</td>
+              <td>-</td>
+              <td>Doanh nghiệp chủ quản chịu trách nhiệm</td>
+              <td>Không độc lập huy động chứng khoán</td>
+              <td>-</td>
+              <td>
+                <span class="tag">Chi nhánh: thực hiện toàn bộ/một phần chức năng của DN; có thể kinh doanh</span>
+                <span class="tag">VPĐD: đại diện, <em>không</em> kinh doanh</span>
+                <span class="tag">Địa điểm KD: nơi tiến hành hoạt động kinh doanh</span>
+              </td>
+              
+            </tr>
+            <tr>
+              <td><strong>Doanh nghiệp xã hội</strong> <span class="muted">(“tình trạng” đặc thù)</span></td>
+              <td>LDN 2020 <a href="#ref-ldn2020">Điều 10</a></td>
+              <td class="yes">Theo loại hình DN gốc</td>
+              <td>-</td>
+              <td>Tái đầu tư ≥ 51% lợi nhuận cho mục tiêu xã hội/môi trường (10.1c)</td>
+              <td>Được huy động, nhận tài trợ theo Điều 10.2</td>
+              <td>-</td>
+              <td>Phải duy trì mục tiêu & báo cáo cơ quan có thẩm quyền (10.2, 10.3)</td>
+              
+            </tr>
+          </tbody>
+        </table>
+        <div id="tbl-note" class="muted" style="padding:10px 12px">
+          <small><span class="kbd">GCN ĐKDN</span> = Giấy chứng nhận đăng ký doanh nghiệp.</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="so-do-cay">
+      <h3 style="margin:0 0 10px">2) Sơ đồ cây — bức tranh tổng thể trong một lần nhìn</h3>
+      <div class="grid grid-2">
+        <div class="card tree">
+          <ul>
+            <li>
+              <div class="node"><strong>Doanh nghiệp (LDN 2020)</strong> <span class="m">Điều 46, 74, 111, 177, 188</span></div>
+              <ul>
+                <li><div class="node">CTTNHH 2+TV</div></li>
+                <li><div class="node">CTTNHH 1TV</div></li>
+                <li><div class="node">Công ty cổ phần</div></li>
+                <li><div class="node">Công ty hợp danh</div></li>
+                <li><div class="node">Doanh nghiệp tư nhân</div></li>
+                <li>
+                  <div class="node"><em>Đơn vị phụ thuộc</em> (Điều 44)</div>
+                  <ul>
+                    <li><div class="node">Chi nhánh — có thể kinh doanh</div></li>
+                    <li><div class="node">Văn phòng đại diện — <strong>không</strong> kinh doanh</div></li>
+                    <li><div class="node">Địa điểm kinh doanh</div></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="node"><strong>Nhóm hợp tác (Luật HTX 2023)</strong> <span class="m">Điều 1, 4, 8</span></div>
+              <ul>
+                <li><div class="node">Tổ hợp tác</div></li>
+                <li><div class="node">Hợp tác xã</div></li>
+                <li><div class="node">Liên hiệp hợp tác xã</div></li>
+              </ul>
+            </li>
+            <li>
+              <div class="node"><strong>Hộ kinh doanh</strong> (NĐ 01/2021, Ch. VIII)</div>
+            </li>
+            <li>
+              <div class="node"><strong>Doanh nghiệp xã hội</strong> (Điều 10 LDN 2020) <span class="m">“Tình trạng” tự nguyện áp lên một DN đã đăng ký</span></div>
+            </li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4 style="margin:0 0 6px">Ký hiệu & hướng dẫn đọc</h4>
+          <div class="legend">
+            <div class="item"><span class="dot a"></span> <span>Nhóm theo luật/chế định</span></div>
+            <div class="item"><span class="dot b"></span> <span>Loại hình/đơn vị cụ thể</span></div>
+            <div class="item"><span class="dot c"></span> <span>Tư cách pháp nhân</span></div>
+            <div class="item"><span class="dot d"></span> <span>Chế độ trách nhiệm</span></div>
+          </div>
+          <p class="muted" style="margin-top:10px">Sơ đồ thể hiện <em>nhóm chủ thể</em> và <em>mối quan hệ</em> (doanh nghiệp ↔ đơn vị phụ thuộc; khu vực hợp tác ↔ các cấp tổ chức).</p>
+          <p class="muted">“Doanh nghiệp xã hội” là tư cách đặc thù theo Điều 10, không tạo ra loại hình pháp lý mới mà ràng buộc nghĩa vụ về mục tiêu và phân phối lợi nhuận.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="can-cu-phap-ly">
+      <h3 style="margin:0 0 10px">3) Căn cứ pháp lý (trích dẫn chính thức)</h3>
+      <ol class="footnotes">
+        <li id="ref-ldn2020"><strong>Luật Doanh nghiệp 2020</strong> (Luật số 59/2020/QH14, hiệu lực 01/01/2021). Bản toàn văn tại CSDL Quốc gia VBPL: 
+          <a href="https://vbpl.vn/TW/Pages/vbpq-toanvan.aspx?ItemID=142881" target="_blank" rel="noopener">vbpl.vn — ItemID 142881</a>. 
+          Các điều khoản sử dụng: Điều 10 (DN xã hội), Điều 44 (Chi nhánh/VPĐD/Địa điểm KD), Điều 46 (CTTNHH 2+TV), Điều 74 (CTTNHH 1TV), Điều 111–116 (CTCP), Điều 177+ (CT hợp danh), Điều 188+ (DNTN).
+        </li>
+        <li id="ref-nd01"><strong>Nghị định 01/2021/NĐ‑CP</strong> của Chính phủ về đăng ký doanh nghiệp (điều chỉnh cả đăng ký hộ kinh doanh). Bản toàn văn: 
+          <a href="https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Nghi-dinh-01-2021-ND-CP-dang-ky-doanh-nghiep-283247.aspx" target="_blank" rel="noopener">Thư viện Pháp luật</a> 
+          (Chương VIII: Hộ kinh doanh; Điều 79, 80, 82–88).
+        </li>
+        <li id="ref-lhtx2023"><strong>Luật Hợp tác xã 2023</strong> (Luật số 17/2023/QH15, hiệu lực từ 01/07/2024). Bản toàn văn tại CSDL VBPL (Bộ KH&ĐT): 
+          <a href="https://vbpl.vn/bokehoachvadautu/Pages/vbpq-toanvan.aspx?ItemID=166269" target="_blank" rel="noopener">vbpl.vn — ItemID 166269</a>. 
+          Các điều khoản tham chiếu: Điều 1 (Phạm vi điều chỉnh), Điều 4 (Giải thích từ ngữ), Điều 8 (Nguyên tắc), các điều về tổ chức quản lý, đăng ký (41–48), góp vốn/mua cổ phần tại DN khác (Điều 82).
+        </li>
+      </ol>
+      <p class="muted">Tài liệu này không thay thế tư vấn pháp lý. Khi cần áp dụng vào trường hợp cụ thể, vui lòng đối chiếu toàn văn điều luật và văn bản hướng dẫn.</p>
+    </section>
+  </main>
+</body>
+</html>
