@@ -23,6 +23,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       
       - name: Generate index.html
         run: |
@@ -191,10 +193,15 @@ jobs:
             title=$(extract_title "$file")
             description=$(extract_description "$file")
             
-            # Get file size and modification date
+            # Get file size and modification date from Git
             file_size=$(du -h "$file" 2>/dev/null | cut -f1 || echo "N/A")
-            file_date=$(date -r "$file" "+%d/%m/%Y" 2>/dev/null || echo "N/A")
-            sitemap_date=$(date -r "$file" "+%Y-%m-%d" 2>/dev/null || date "+%Y-%m-%d")
+            sitemap_date=$(git log -1 --format="%cd" --date=short -- "$file")
+            if [ -z "$sitemap_date" ]; then
+              sitemap_date=$(date -r "$file" "+%Y-%m-%d" 2>/dev/null || date "+%Y-%m-%d")
+              file_date=$(date -r "$file" "+%d/%m/%Y" 2>/dev/null || echo "N/A")
+            else
+              file_date=$(git log -1 --format="%cd" --date=format:"%d/%m/%Y" -- "$file")
+            fi
             
             echo "                      <div class=\"page-card\">" >> index.html
             echo "                          <div class=\"page-title\">" >> index.html
