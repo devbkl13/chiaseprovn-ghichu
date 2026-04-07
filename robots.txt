@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ghichu.chiase.pro.vn/sitemap.xml

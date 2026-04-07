@@ -176,6 +176,12 @@ jobs:
                   <div class="page-grid">
           EOF
           
+          # Initialize sitemap.xml
+          cat > sitemap.xml << 'EOF'
+          <?xml version="1.0" encoding="UTF-8"?>
+          <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+          EOF
+
           # Process each HTML file
           files=($(find . -name "*.html" -not -name "index.html" | sort))
           file_count=${#files[@]}
@@ -188,6 +194,7 @@ jobs:
             # Get file size and modification date
             file_size=$(du -h "$file" 2>/dev/null | cut -f1 || echo "N/A")
             file_date=$(date -r "$file" "+%d/%m/%Y" 2>/dev/null || echo "N/A")
+            sitemap_date=$(date -r "$file" "+%Y-%m-%d" 2>/dev/null || date "+%Y-%m-%d")
             
             echo "                      <div class=\"page-card\">" >> index.html
             echo "                          <div class=\"page-title\">" >> index.html
@@ -201,9 +208,22 @@ jobs:
             echo "                          <div class=\"page-path\">📄 $file_clean</div>" >> index.html
             echo "                      </div>" >> index.html
             
+            # Add entry to sitemap.xml
+            cat >> sitemap.xml << EOF
+            <url>
+              <loc>https://ghichu.chiase.pro.vn/$file_clean</loc>
+              <lastmod>$sitemap_date</lastmod>
+              <changefreq>monthly</changefreq>
+              <priority>0.8</priority>
+            </url>
+          EOF
+
             file_count=$((file_count + 1))
           done
           
+          # Close sitemap.xml
+          echo "</urlset>" >> sitemap.xml
+
           # Close HTML
           cat >> index.html << EOF
                   </div>
